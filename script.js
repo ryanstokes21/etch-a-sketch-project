@@ -24,7 +24,7 @@ function colorGrid(item) {
   })
 }
 
-function changeGridSize(input = 16) {
+function changeGridSize() {
   let minSize = 1;
   let maxSize = 100;
   let userInput;
