@@ -24,4 +24,28 @@ function colorGrid(item) {
   })
 }
 
+function changeGridSize(input = 16) {
+  let minSize = 1;
+  let maxSize = 100;
+  let userInput;
+
+  do {
+    userInput = prompt('Enter a number between 1 - 100 to change the grid size.');
+
+    if (userInput === null || userInput === '') {
+      createGrid(userInput = 16);
+      break;
+    }
+
+    userInput = Number(userInput);
+
+  } while(isNaN(userInput) || userInput < minSize || userInput > maxSize);
+
+
+  gridContainer.innerHTML = '';
+  createGrid(userInput);
+}
+
+gridSizeBtn.addEventListener('click', changeGridSize);
+
 createGrid();
