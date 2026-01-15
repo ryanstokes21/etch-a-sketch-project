@@ -18,9 +18,11 @@ function createGrid(size = 16) {
   }
 }
 
-function colorGrid(item) {
-  item.addEventListener('mouseenter', () => {
-    item.style.backgroundColor = 'black';
+function colorGrid() {
+  gridContainer.addEventListener('mouseenter', (e) => {
+    if(e.target.classList.contains('grid-item')){
+      item.style.backgroundColor = 'black';
+    }
   })
 }
 
