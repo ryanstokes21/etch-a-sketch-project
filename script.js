@@ -15,7 +15,6 @@ function createGrid(size) {
     gridContainer.appendChild(gridItem);
     colorGrid(gridItem);
   }
-
 }
 
 function colorGrid(item) {
