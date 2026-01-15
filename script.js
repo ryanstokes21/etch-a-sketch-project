@@ -1,6 +1,7 @@
 const gridContainer = document.getElementById('grid-container');
+const gridSizeBtn = document.getElementById('grid-size-btn');
 
-function createGrid(size) {
+function createGrid(size = 16) {
   for(let i = 0; i < (size * size); i++) {
     const gridItem = document.createElement('div');
     gridContainer.style.border = '1px solid black';
