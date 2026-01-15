@@ -2,9 +2,9 @@ const gridContainer = document.getElementById('grid-container');
 const gridSizeBtn = document.getElementById('grid-size-btn');
 
 function createGrid(size = 16) {
+  gridContainer.style.border = '1px solid black';
   for(let i = 0; i < (size * size); i++) {
     const gridItem = document.createElement('div');
-    gridContainer.style.border = '1px solid black';
     let gridItemSize = 100 / size;
 
     gridItem.classList.add('grid-item');
