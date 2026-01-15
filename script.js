@@ -24,4 +24,4 @@ function colorGrid(item) {
   })
 }
 
-createGrid(16);
+createGrid();
