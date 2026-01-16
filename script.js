@@ -14,16 +14,22 @@ function createGrid(size = 16) {
     gridItem.style.border = '1px solid black';
 
     gridContainer.appendChild(gridItem);
-    colorGrid(gridItem);
   }
+  colorGrid();
 }
 
 function colorGrid() {
-  gridContainer.addEventListener('mouseenter', (e) => {
+  function generateRandomRgb() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+  gridContainer.addEventListener('mouseover', (e) => {
     if(e.target.classList.contains('grid-item')){
-      item.style.backgroundColor = 'black';
+      e.target.style.backgroundColor = generateRandomRgb();
     }
-  })
+  });
 }
 
 function changeGridSize() {
