@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  text-align: center;
+}
+
+#size {
+  margin: 20px;
+}
+
 #container {
   display: flex;
   flex-wrap: wrap;
