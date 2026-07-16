@@ -18,10 +18,18 @@ function createGrid(size = 16) {
   }
 }
 
+function getRandomRgb() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 container.addEventListener('mouseover', (e) => {
   const colorCell = e.target.closest('.cell');
   if (colorCell !== null) {
-    colorCell.style.backgroundColor = 'black';
+    colorCell.style.backgroundColor = getRandomRgb();
   }
 });
 
